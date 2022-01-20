@@ -15,17 +15,20 @@
 %>
 <br/>
 <%= request.getRequestURI() %>
-<br>
+<br/>
 <%= LocalDateTime.now() %>
 <hr/>
 <%
     List<User> users = (List) request.getAttribute("users");
     User anUser = users.get(0);
 %>
-<b><%= anUser.getName() %></b>
-<i><%= anUser.getCountry() %></i>
-<u><%= anUser.getAge() %></u>
-
+<b><%= anUser.getName() %>
+</b>
+<i><%= anUser.getCountry() %>
+</i>
+<u><%= anUser.getAge() %>
+</u>
+<p/>
 <table>
     <% for (User user : users) {%>
     <tr>
