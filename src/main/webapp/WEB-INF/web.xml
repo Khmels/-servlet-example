@@ -31,4 +31,11 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>servletTags</taglib-uri>
+            <taglib-location>/WEB-INF/servlet-tags.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 </web-app>
