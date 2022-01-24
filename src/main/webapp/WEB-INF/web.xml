@@ -38,4 +38,33 @@
             <taglib-location>/WEB-INF/servlet-tags.tld</taglib-location>
         </taglib>
     </jsp-config>
+
+    <context-param>
+        <param-name>message</param-name>
+        <param-value>Hello Servlets</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>ContextAndInitParamsServlet</servlet-name>
+        <servlet-class>servlet.others.ContextAndInitParamsServlet</servlet-class>
+        <init-param>
+            <param-name>message</param-name>
+            <param-value>init parameter</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContextAndInitParamsServlet</servlet-name>
+        <url-pattern>/params-from-Xml</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
 </web-app>

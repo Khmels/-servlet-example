@@ -1,4 +1,4 @@
-package servlet;
+package servlet.others;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
