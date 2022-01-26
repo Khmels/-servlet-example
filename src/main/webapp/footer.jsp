@@ -1,0 +1,1 @@
+<p>Copyright ©Some_company_name, Inc. 2002.</p>
