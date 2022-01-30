@@ -19,7 +19,7 @@ public class ProductsServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         try{
-            String url = "jdbc:mysql://localhost:3306/productdb?serverTimezone=Europe/Kiev&useSSL=false";
+            String url = "jdbc:mysql://localhost:3306/productdb";
             String username = "root";
             String password = "Root=7ss";
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
