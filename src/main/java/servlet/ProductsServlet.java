@@ -19,13 +19,13 @@ public class ProductsServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         try{
-            String url = "jdbc:mysql://localhost/productdb?serverTimezone=Europe/Moscow&useSSL=false";
+            String url = "jdbc:mysql://localhost:3306/productdb?serverTimezone=Europe/Kiev&useSSL=false";
             String username = "root";
-            String password = "password";
+            String password = "Root=7ss";
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             try (Connection conn = DriverManager.getConnection(url, username, password)){
 
-                writer.println("Connection to ProductDB succesfull!");
+                writer.println("Connection to ProductDB successfully!");
             }
         }
         catch(Exception ex){
