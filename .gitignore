@@ -11,3 +11,4 @@
 *.class
 target/
 .idea/
+/src/main/java/Main.java

@@ -11,8 +11,8 @@
     <label>Name</label><br>
     <input name="name"/><br><br>
     <label>Price</label><br>
-    <input name="price" type="number" min="100" /><br><br>
-    <input type="submit" value="Save" />
+    <input name="price" type="number" min="100"/><br><br>
+    <input type="submit" value="Save"/>
 </form>
 </body>
 </html>

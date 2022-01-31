@@ -14,7 +14,7 @@ public class DbCreateServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        getServletContext().getRequestDispatcher("/create.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/dbcreate.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -22,14 +22,14 @@ public class DbCreateServlet extends HttpServlet {
 
         try {
             String name = request.getParameter("name");
-            int price = Integer.parseInt(request.getParameter("price"));
+            long price = Long.parseLong(request.getParameter("price"));
             Product product = new Product(name, price);
             ProductDB.insert(product);
-            response.sendRedirect(request.getContextPath()+"/index");
+            response.sendRedirect(request.getContextPath()+"/products-db");
         }
         catch(Exception ex) {
 
-            getServletContext().getRequestDispatcher("/create.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/dbcreate.jsp").forward(request, response);
         }
     }
 }
